@@ -1,0 +1,24 @@
+type Artwork @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  Art_name: String
+  Art_address: String
+  Whitelist_art: Boolean
+  User_ID: String
+  token_ID: String
+}
+
+type Settings @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  Notification_Setting: String
+  Profile_Setting: String
+}
+
+type Notification @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  blockchain: String
+  contract_address: String
+  file: String
+  image_url: String
+  marketplace: String
+  user: String
+} 
